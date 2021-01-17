@@ -26,13 +26,22 @@ class TelephoneCrudController extends CrudController
                 'label' => 'YearOfRelease',
                 'type' => 'text',
             ],
-            [  // Select2
+            [
                 'label'     => "Brand",
                 'type'      => 'select',
                 'name'      => 'brand_id', // the db column for the foreign key
                 // optional
                 'entity'    => 'brand', // the method that defines the relationship in your Model
                 'model'     => "App\Models\Brand", // foreign key model
+                'attribute' => 'name' // foreign key attribute that is shown to user
+            ],
+            [
+                'label' => "TelephoneModel",
+                'type' => 'select',
+                'name' => 'telephone_model_id', // the db column for the foreign key
+                // optional
+                'entity' => 'telephoneModel', // the method that defines the relationship in your Model
+                'model' => "App\Models\Telephonemodel", // foreign key model
                 'attribute' => 'name' // foreign key attribute that is shown to user
             ]
         ];

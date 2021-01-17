@@ -17,6 +17,7 @@ class CreateTelephonesTable extends Migration
             $table->id();
             $table->string('yearofrelease');
             $table->integer('brand_id')->unsigned();
+            $table->integer('telephone_model_id')->unsigned();
             $table->timestamps();
         });
     }

@@ -37,6 +37,9 @@ class Telephonemodel extends Model
     public function brand() {
         return $this->belongsTo(Brand::class);
     }
+    public function telephone() {
+        return $this->hasOne(Telephone::class);
+    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES
