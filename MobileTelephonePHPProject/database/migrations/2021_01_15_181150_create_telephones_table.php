@@ -16,6 +16,7 @@ class CreateTelephonesTable extends Migration
         Schema::create('telephones', function (Blueprint $table) {
             $table->id();
             $table->string('yearofrelease');
+            $table->integer('brand_id')->unsigned();
             $table->timestamps();
         });
     }

@@ -37,6 +37,9 @@ class Brand extends Model
     public function telephoneModels() {
         return $this->hasMany(Telephonemodel::class);
     }
+    public function telephones() {
+        return $this->hasMany(Telephone::class);
+    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES
