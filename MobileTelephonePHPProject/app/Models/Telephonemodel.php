@@ -34,7 +34,9 @@ class Telephonemodel extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-
+    public function brand() {
+        return $this->belongsTo(Brand::class);
+    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES

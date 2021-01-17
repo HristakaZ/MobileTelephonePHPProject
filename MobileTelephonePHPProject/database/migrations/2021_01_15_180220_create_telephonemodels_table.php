@@ -22,6 +22,7 @@ class CreateTelephonemodelsTable extends Migration
             $table->string('camera');
             $table->string('battery');
             $table->string('display');
+            $table->integer('brand_id')->unsigned();
             $table->timestamps();
         });
     }
