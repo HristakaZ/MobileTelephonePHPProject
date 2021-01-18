@@ -26,7 +26,8 @@ class BrandRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'name' => 'required',
+            'yearofestablishment' => 'required|min:4'
         ];
     }
 
@@ -50,7 +51,9 @@ class BrandRequest extends FormRequest
     public function messages()
     {
         return [
-            //
+            'name.required' => 'The brand name is required.',
+            'yearofestablishment.required' => 'Please provide a year of establishment.',
+            'yearofestablishment.min' => 'Please provide a valid year of establishment.'
         ];
     }
 }

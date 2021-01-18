@@ -38,7 +38,7 @@ class TelephonemodelCrudController extends CrudController
             ],
             [
                 'name'=> 'ram',
-                'label' => 'RAM',
+                'label' => 'Memory',
                 'type'=> 'text'
             ],
             [

@@ -15,13 +15,13 @@ class CreateTelephonemodelsTable extends Migration
     {
         Schema::create('telephonemodels', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('cpu');
-            $table->string('gpu');
-            $table->string('ram');
-            $table->string('camera');
-            $table->string('battery');
-            $table->string('display');
+            $table->longText('name');
+            $table->longText('cpu');
+            $table->longText('gpu');
+            $table->longText('ram');
+            $table->longText('camera');
+            $table->longText('battery');
+            $table->longText('display');
             $table->integer('brand_id')->unsigned();
             $table->timestamps();
         });
