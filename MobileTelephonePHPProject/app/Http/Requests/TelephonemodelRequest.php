@@ -26,7 +26,14 @@ class TelephonemodelRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'name' => 'required',
+            'cpu' => 'required',
+            'gpu' => 'required',
+            'ram' => 'required',
+            'camera' => 'required',
+            'battery' => 'required',
+            'display' => 'required',
+            'brand_id' => 'required'
         ];
     }
 
@@ -50,7 +57,14 @@ class TelephonemodelRequest extends FormRequest
     public function messages()
     {
         return [
-            //
+            'name.required' => 'The telephone model name is required.',
+            'cpu.required' => 'The telephone model cpu is required.',
+            'gpu.required' => 'The telephone model gpu is required.',
+            'ram.required' => 'The telephone model ram is required.',
+            'camera.required' => 'The telephone model camera specifications are required.',
+            'battery.required' => 'The telephone model battery specifications are required.',
+            'display.required' => 'The telephone model display specifications are required.',
+            'brand_id.required' => 'The telephone model brand is required.'
         ];
     }
 }
