@@ -26,7 +26,9 @@ class TelephoneRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'yearofrelease' => 'required|min:4',
+            'brand_id' => 'required',
+            'telephone_model_id' => 'required'
         ];
     }
 
@@ -50,7 +52,10 @@ class TelephoneRequest extends FormRequest
     public function messages()
     {
         return [
-            //
+            'yearofrelease.required' => 'Please provide a year of release.',
+            'yearofrelease.min' => 'Please provide a valid year of release.',
+            'brand_id.required' => 'You should provide a brand.',
+            'telephone_model_id.required' => 'You should provide a telephone model.'
         ];
     }
 }
