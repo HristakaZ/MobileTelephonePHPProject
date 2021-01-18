@@ -26,7 +26,7 @@ class TelephoneRequest extends FormRequest
     public function rules()
     {
         return [
-            'yearofrelease' => 'required|min:4',
+            'yearofrelease' => 'integer|required|min:1876', //1876 is the year the first telephone was invented
             'brand_id' => 'required',
             'telephone_model_id' => 'required'
         ];
@@ -52,8 +52,10 @@ class TelephoneRequest extends FormRequest
     public function messages()
     {
         return [
+            'yearofrelease.integer' => 'The year of release must be a number.',
             'yearofrelease.required' => 'Please provide a year of release.',
-            'yearofrelease.min' => 'Please provide a valid year of release.',
+            'yearofrelease.min' => 'Please provide a valid year of release. The year cannot be lower than 1876(the year the
+            telephone was invented).',
             'brand_id.required' => 'You should provide a brand.',
             'telephone_model_id.required' => 'You should provide a telephone model.'
         ];
