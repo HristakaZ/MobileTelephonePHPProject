@@ -18,7 +18,7 @@ class CreateTelephonemodelsTable extends Migration
             $table->longText('name');
             $table->longText('cpu');
             $table->longText('gpu');
-            $table->longText('ram');
+            $table->longText('memory');
             $table->longText('camera');
             $table->longText('battery');
             $table->longText('display');
