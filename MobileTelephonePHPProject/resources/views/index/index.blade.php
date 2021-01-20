@@ -4,8 +4,19 @@
     <div class="inner">
         <div class="content">
             <header>
-                <center><h1>{{$title}}</h1></center>
+                <h1 style="text-align: center">{{$title}}</h1>
             </header>
+            <form action="/search" method="get">
+                <div>
+                    <input type="text" id="searchTextInput" placeholder="Search Telephone by year of release"
+                           name="searchTextInput" style="float: right" />
+                    <br>
+                    <br>
+                    <br>
+                    <input type="submit" id="submitSearch" style="float: right" />
+                </div>
+            </form>
+            <br>
             @foreach($telephones as $telephone)
                 @if(isset($telephone))
                 <h3>Telephone brand: {{$telephone->brand->name}}</h3> <br>

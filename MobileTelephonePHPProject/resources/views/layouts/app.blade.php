@@ -18,13 +18,13 @@
     <nav class="left">
         <a href="#menu"><span>Menu</span></a>
     </nav>
-    <a href="#" class="logo">Mobile Telephone Website</a>
+    <a href="http://mobiletelephone-php-project.com" class="logo">Mobile Telephone Website</a>
 </header>
 
 <!-- Menu -->
 <nav id="menu">
     <ul class="links">
-        <li><a href="#">Home</a></li>
+        <li><a href="http://mobiletelephone-php-project.com">Home</a></li>
         <li><a href="http://mobiletelephone-php-project.com/admin">Login</a></li>
     </ul>
 </nav>
