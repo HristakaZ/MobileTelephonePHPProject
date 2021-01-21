@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+    <div style="margin-left: 10%">
     <h1>Telephones from the search results:</h1>
     <br>
     @foreach($telephones as $telephone)
@@ -14,4 +15,5 @@
             <h4>Telephone image: <img src="{{$telephone->image}}" width="300" height="350" alt="no image"> <br> <br></h4>
         </strong>
     @endforeach
+    </div>
 @endsection

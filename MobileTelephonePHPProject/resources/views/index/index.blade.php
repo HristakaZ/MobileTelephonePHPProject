@@ -1,6 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
+    <style>
+        #searchOption{
+            background-color:white;
+            width:50%;
+            text-align: center;
+            float: right;
+        }
+        #searchTextInput{
+            width: 50%;
+            text-align: center;
+            float: right;
+        }
+    </style>
     <div class="inner">
         <div class="content">
             <header>
@@ -8,8 +21,16 @@
             </header>
             <form action="/search" method="get">
                 <div>
-                    <input type="text" id="searchTextInput" placeholder="Search Telephone by year of release"
-                           name="searchTextInput" style="float: right" />
+                    <input type="text" id="searchTextInput" placeholder="Search Telephone by criteria"
+                           name="searchTextInput" />
+                    <br>
+                    <br>
+                    <br>
+                    <select name="searchOption" id="searchOption">
+                        <option value="yearofrelease">Year of release</option>
+                        <option value="telephonemodel">Telephone Model</option>
+                        <option value="telephonebrand">Telephone Brand</option>
+                    </select>
                     <br>
                     <br>
                     <br>
